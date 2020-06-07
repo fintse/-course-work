@@ -1,0 +1,12 @@
+import numpy as np
+print("Введите число строк:")
+n = int(input())
+print("Введите число столбцов:")
+m = int(input())
+arr = np.random.sample((n,m))
+arrav = arr.mean(axis=0)
+arr1 =  np.vstack((arr, arrav))
+print(arr1)
+arrav1 = arr1.mean(axis=1)
+arr1 = np.column_stack((arr1,arrav1))
+print(arr1)
